@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTC Scouting - Page 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FTC Scouting - Page 3</h1>
+        <form id="page3">
+            <label for="lowBasketTele">Scored in Low Basket during Tele-op:</label>
+            <select id="lowBasketTele" name="lowBasketTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="highBasketTele">Scored in High Basket during Tele-op:</label>
+            <select id="highBasketTele" name="highBasketTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="lowChamberTele">Scored in Low Chamber during Tele-op:</label>
+            <select id="lowChamberTele" name="lowChamberTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="highChamberTele">Scored in High Chamber during Tele-op:</label>
+            <select id="highChamberTele" name="highChamberTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="netZoneTele">Scored in Net Zone during Tele-op:</label>
+            <select id="netZoneTele" name="netZoneTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="ascendedTele">Did they Ascend:</label>
+            <select id="ascendedTele" name="ascendedTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="parkedTele">Did they Park:</label>
+            <select id="parkedTele" name="parkedTele" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="minorPenalties">Minor Penalties:</label>
+            <input type="number" id="minorPenalties" name="minorPenalties" required>
+
+            <label for="majorPenalties">Major Penalties:</label>
+            <input type="number" id="majorPenalties" name="majorPenalties" required>
+
+            <label for="playedDefense">Did the Robot play defense:</label>
+            <select id="playedDefense" name="playedDefense" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="robotBroke">Did the Robot break:</label>
+            <select id="robotBroke" name="robotBroke" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </form>
+        <div class="button-container">
+            <button onclick="goToPage2FromPage3()">Back</button>
+            <button onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

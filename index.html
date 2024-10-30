@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTC Scouting - Page 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FTC Scouting - Page 1</h1>
+        <form id="page1">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" required>
+
+            <label for="matchNumber">Match Number:</label>
+            <input type="number" id="matchNumber" name="matchNumber" required>
+
+            <label for="allianceColor">Alliance Color:</label>
+            <select id="allianceColor" name="allianceColor" required>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+            </select>
+
+            <label for="teamNumber">Team Number:</label>
+            <input type="number" id="teamNumber" name="teamNumber" required>
+
+            <label for="preloadGamePiece">Preloaded Game Piece:</label>
+            <select id="preloadGamePiece" name="preloadGamePiece" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="startingLocation">Starting Location :</label>
+            <select id="startingLocation" name="startingLocation" required>
+                <option value="Red">Red 1</option>
+                <option value="Red">Red 2</option>
+                <option value="Red">Red 3</option>
+                <option value="Blue">Blue 1</option>
+                <option value="Blue">Blue 2</option>
+                <option value="Blue">Blue 3</option>
+            </select>
+        
+        </form>
+        <div class="button-container">
+            <button onclick="goToPage2()">Next</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

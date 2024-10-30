@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTC Scouting - Page 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FTC Scouting - Page 2</h1>
+        <form id="page2">
+            <label for="lowBasketAuto">Scored in Low Basket during Auto:</label>
+            <select id="lowBasketAuto" name="lowBasketAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="highBasketAuto">Scored in High Basket during Auto:</label>
+            <select id="highBasketAuto" name="highBasketAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="lowChamberAuto">Scored in Low Chamber during Auto:</label>
+            <select id="lowChamberAuto" name="lowChamberAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="highChamberAuto">Scored in High Chamber during Auto:</label>
+            <select id="highChamberAuto" name="highChamberAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="netZoneAuto">Scored in Net Zone during Auto:</label>
+            <select id="netZoneAuto" name="netZoneAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="parkedAuto">Parked in Auto:</label>
+            <select id="parkedAuto" name="parkedAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="ascendedAuto">Did they Ascend in Auto:</label>
+            <select id="ascendedAuto" name="ascendedAuto" required>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </form>
+        <div class="button-container">
+            <button onclick="goToPage1()">Back</button>
+            <button onclick="goToPage3()">Next</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

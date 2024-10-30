@@ -1,0 +1,35 @@
+{
+    "eventName": "Sample Event",
+    "matchNumber": 1,
+    "allianceColor": "Red",
+    "teamNumber": 1234,
+    "preloadGamePiece": "Yes",
+    "startingLocation": "Zone A",
+    "autonomous": {
+        "lowBasketAuto": true,
+        "highBasketAuto": false,
+        "lowChamberAuto": true,
+        "highChamberAuto": false,
+        "netZoneAuto": true,
+        "parkedAuto": false,
+        "ascendedAuto": true
+    },
+    "teleOp": {
+        "lowBasketTele": true,
+        "highBasketTele": false,
+        "lowChamberTele": true,
+        "highChamberTele": false,
+        "netZoneTele": true,
+        "ascendedTele": true,
+        "parkedTele": false
+    },
+    "penalties": {
+        "minorPenalties": 2,
+        "majorPenalties": 0
+    },
+    "performance": {
+        "playedDefense": true,
+        "robotBroke": false,
+        "comments": "Good performance"
+    }
+}
