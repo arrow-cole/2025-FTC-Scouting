@@ -1,13 +1,9 @@
 let formData = {}; // Initialize an empty object to store all form data
 
-// Load data from JSON file (for testing purposes)
-fetch("scouting_data.json")
-    .then(response => response.json())
-    .then(data => {
-        console.log("Loaded JSON data:", data);
-        formData = data; // Assign loaded JSON data to formData
-    })
-    .catch(error => console.error("Error loading JSON:", error));
+// Load data from localStorage if available
+if (localStorage.getItem("formData")) {
+    formData = JSON.parse(localStorage.getItem("formData"));
+}
 
 function goToPage2() {
     // Capture data from Page 1 and store it in formData
@@ -42,25 +38,30 @@ function submitForm() {
     const page3Form = document.getElementById("page3");
     Object.assign(formData, Object.fromEntries(new FormData(page3Form).entries()));
 
-    // Google Apps Script Web App URL (replace with your own)
-    const url = "https://script.google.com/macros/s/AKfycbz0oSGLvpFktaoKnm63XvGvF8RO0S5EN_7LRSVrLZrDij-DXHrtURvsFCx-5HFOQlQD2A/execl";
+    // Save form data to localStorage
+    localStorage.setItem("formData", JSON.stringify(formData));
 
-    // Send data to Google Sheets via Google Apps Script
-    fetch(url, {
-        method: "POST",
-        mode: "no-cors", // Use "no-cors" mode for POST requests to Google Apps Script
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData) // Convert formData object to JSON string
-    })
-    .then(() => {
-        alert("Data submitted successfully!");
-        // Redirect to index.html after successful submission
-        window.location.href = "index.html";
-    })
-    .catch(error => {
-        console.error("Error submitting data:", error);
-        alert("There was an error submitting your data. Please try again.");
-    });
+    alert("Data submitted successfully and saved locally!");
+
+    // Redirect to index.html after successful submission
+    window.location.href = "index.html";
+}
+
+// Function to load stored data (if needed)
+function loadStoredData() {
+    const storedData = JSON.parse(localStorage.getItem("formData"));
+    if (storedData) {
+        // You can populate the forms with this data if you want
+        // For example:
+        for (const [key, value] of Object.entries(storedData)) {
+            const element = document.querySelector(`[name="${key}"]`);
+            if (element) {
+                if (element.type === "checkbox" || element.type === "radio") {
+                    element.checked = (value === "true");
+                } else {
+                    element.value = value;
+                }
+            }
+        }
+    }
 }
